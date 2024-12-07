@@ -6,7 +6,7 @@ else:
   try:
     num1 = int(num) % 10
     num2 = int(num) // 10
-    new_num = str(num1) + str(num2)
+    new_num = num1 * 100 + num2
     print("Полученное число:", new_num)
   except:
     print("Что-то пошло не так")
