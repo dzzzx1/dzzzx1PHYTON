@@ -1,12 +1,13 @@
 #Вариант 19: Дано трехзначное число. В нем зачеркнули первую справа цифру и приписали ее слева. Вывести полученное число.
-num = int(input("Введите трехзначное число: "))
-num_str = str(num)
-if len(num_str) != 3:
+num = (input("Введите трехзначное число: "))
+if len(num) != 3:
   print("число должно быть трехзначным!!")
 else:
   try:
-    new_num_str = num_str[-1] + num_str[:-1]
-    new_num = int(new_num_str)
+    num = int(num)
+    num1 = num % 10
+    num2 = num // 10
+    new_num = str(num1)+str(num2)
     print("Полученное число:", new_num)
   except:
     print("Что-то пошло не так")
