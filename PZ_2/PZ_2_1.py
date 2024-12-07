@@ -4,9 +4,8 @@ if len(num) != 3:
   print("число должно быть трехзначным!!")
 else:
   try:
-    num = int(num)
-    num1 = num % 10
-    num2 = num // 10
+    num1 = int(num) % 10
+    num2 = int(num) // 10
     new_num = str(num1)+str(num2)
     print("Полученное число:", new_num)
   except:
