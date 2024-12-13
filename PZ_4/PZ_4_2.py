@@ -2,7 +2,7 @@
 N = int(input("Введите целое число N (> 0): "))
 try:
     total_sum = 0
-    for i in range(1, N ):
+    for i in range( 1, N+1 ):
         total_sum += i ** N
     print("Сумма:", total_sum)
 except :
