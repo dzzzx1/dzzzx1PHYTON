@@ -12,7 +12,6 @@ def ShiftLeft3(A, B, C):
     return A, B, C
 
 
-
 while True:
     try:
         A = int(input("Введите число 1: "))
