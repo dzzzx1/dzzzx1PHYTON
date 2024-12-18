@@ -9,13 +9,17 @@ def ShiftLeft3(A, B, C):
     A = B
     B = C
     C = shift
-    print(A, B, C)
+    return A, B, C
+
+
 
 while True:
     try:
         A = int(input("Введите число 1: "))
         B = int(input("Введите число 2: "))
         C = int(input("Введите число 3: "))
-        ShiftLeft3(A, B, C)
+
+        A, B, C = ShiftLeft3(A, B, C)
+        print("Набор после сдвига:", A, B, C)
     except:
         print("Что то пошло не так")
