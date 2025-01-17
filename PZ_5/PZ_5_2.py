@@ -21,4 +21,4 @@ while True:
         A, B, C = ShiftLeft3(A, B, C)
         print("Набор после сдвига:", A, B, C)
     except:
-        print("Что то пошло не так")
+        print("Что то пошло не так((")
