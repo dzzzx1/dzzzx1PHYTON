@@ -6,9 +6,9 @@ while True:
     s = input("Введите строку : ")
     try:
         float(s)
-        if '.' in s :
-            print (2)
-        else :
-            print (1)
+        if '.' in s:
+            print(2)
+        else:
+            print(1)
     except:
         print(0)
