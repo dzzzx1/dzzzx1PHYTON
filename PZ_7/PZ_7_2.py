@@ -3,3 +3,16 @@
 # строке, заменив в нем все предыдущие вхождения его последней буквы на символ
 # «.» (точка). Например, слово «МИНИМУМ» надо преобразовать в «.ИНИ.УМ».
 # Количество пробелов между словами не изменять.
+s = input("Введите строку: ")
+words = s.split()
+new_words = []
+for word in words:
+  if word:
+    last_char = word[-1]
+    if word.count(last_char) > 1:
+      new_words = word.replace(last_char, ".")
+      new_words = new_words[:-1]
+      new_words = new_words + last_char
+      print(new_words)
+
+
