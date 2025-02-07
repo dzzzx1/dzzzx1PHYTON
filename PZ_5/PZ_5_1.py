@@ -19,7 +19,7 @@ def steps_to_zero(num):
       num2 //= 10
 
     num -= sum
-  print("Количество действий до 0:", steps)
+  print("Количество действий до 0 :", steps)
 
 while True:
   try:
