@@ -9,4 +9,4 @@ while True:
         else:
             print(False)
     except:
-        print("Что то пошло не так")
+        print("Что то пошло не так ")
