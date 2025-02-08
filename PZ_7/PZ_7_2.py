@@ -5,7 +5,6 @@
 # Количество пробелов между словами не изменять.
 s = input("Введите строку: ")
 words = s.split()
-new_words = []
 for word in words:
   if word:
     last_char = word[-1]
