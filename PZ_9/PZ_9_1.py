@@ -7,7 +7,7 @@ avto = {
     "Audi": ["e-tron", "A7", "Q5"]
 }
 
-print("Вторые модели:")
+print("Вторые модели: ")
 for marka in avto:
     model = avto[marka][1]
     print(marka+ ":", model)
