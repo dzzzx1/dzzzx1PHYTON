@@ -18,13 +18,14 @@ with open('text18-18.txt', encoding='UTF-16') as f:
         if i < 4:
             for char in line:
 
-                if char in '.,!?;:"\'()-...—':
+                if char in '.,!?;:"\'()-—…«»':
                     punctuation_count += 1
 
 print(f'\nКоличество знаков пунктуации в первых четырех строках: {punctuation_count}')
 
-# Формируем новый файл с обратным порядком строк
-with open('text18-18-2.txt', 'w', encoding="utf-8") as f_out:
-    # Реверсируем порядок строк
+if lines and not lines[-1].endswith('\n'):
+    lines[-1] += '\n'
+
+with open('text18-18-2.txt', 'w', encoding='utf-16') as f_out:
     reversed_lines = reversed(lines)
-    f_out.writelines(reversed_lines)
+    f_out.writelines(reversed_lines )
