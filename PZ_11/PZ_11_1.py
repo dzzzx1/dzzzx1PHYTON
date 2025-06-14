@@ -11,7 +11,7 @@
 
 
 with open('1.txt', 'w') as f1:
-    f1.write('-99 6 12 -36 20 45 100 -15')
+    f1.write('-1 6 1 -3 2 4 10 -4')
 
 
 with open('1.txt', 'r') as f1:
@@ -20,22 +20,24 @@ with open('1.txt', 'r') as f1:
 
 
 count = len(numbers)
-average = sum(numbers) / count
-
+average = sum(numbers) / count if count > 0 else 0
 
 new_sequence = []
-if count > 0:
-
-    new_sequence.append(numbers[0])
-
-
-    for i in range(1, count - 1):
+for i in range(count):
+    if i == 0:
+        if count > 1:
+            new_val = numbers[1] ** 2
+        else:
+            new_val = numbers[0] ** 2
+    elif i == count - 1:
+        if count > 1:
+            new_val = numbers[-2] ** 2
+        else:
+            new_val = numbers[0] ** 2
+    else:
         new_val = (numbers[i - 1] + numbers[i + 1]) ** 2
-        new_sequence.append(new_val)
 
-
-    if count > 1:
-        new_sequence.append(numbers[-1])
+    new_sequence.append(new_val)
 
 
 with open('2.txt', 'w', encoding="utf-8") as f2:
