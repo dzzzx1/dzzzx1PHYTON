@@ -24,3 +24,20 @@ with sq.connect("company_strah.db") as con:
         ("10.10.2020 10:10:19", 100000, "Страхование жизни", 120, "Первый филиал")
     ]
     cur.executemany("INSERT INTO services VALUES (?, ?, ?, ?, ?)", information)
+    # cur.execute("SELECT * FROM services ")
+    # print(cur.fetchall())
+    #
+    # cur.execute("SELECT * FROM services WHERE stavka = ?", (30,))
+    # print(cur.fetchall())
+    # cur.execute("SELECT * FROM services WHERE filial = ?", ("Первый филиал",))
+    # print(cur.fetchall())
+    # cur.execute("SELECT data_zak,strah_type,stavka,filial FROM services WHERE strah_sum < ?",(1000,))
+    # print(cur.fetchall())
+    #
+    # cur.execute("DELETE FROM services WHERE data_zak = ?", ("10.10.2020 10:10:10"))
+    # cur.execute("DELETE FROM services WHERE stavka < ?", (40,))
+    # cur.execute("DELETE FROM services WHERE strah_sum > ?", (1000000,))
+    #
+    # cur.execute("UPDATE services SET filial = ? WHERE data_zak = ? AND strah_sum = ? AND strah_type = ?",("Второй филилал", "10.10.2020 10:10:10", "100000", "Страхование жизни"))
+    # cur.execute("UPDATE services SET strah_sum = ? WHERE data_zak = ? AND strah_type = ? AND stavka = ?",(200000, "10.10.2020 10:10:11", "Анна", "Владимировна"))
+    # cur.execute("UPDATE services SET dohod = ? + 500 WHERE notary_type = ?",(1300, "Продажа коммерческой недвижимости"))
